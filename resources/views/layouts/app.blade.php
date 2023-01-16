@@ -20,9 +20,18 @@
         <div>
             <a href="/" class="mx-3 py-4">Home</a>
         </div>
+        @auth
+        <livewire:logout />
+        @endauth
+
+        @guest
         <div>
             <a href="/login" class="mx-3 py-4">Login</a>
         </div>
+        <div>
+            <a href="/register" class="mx-3 py-4">Register</a>
+        </div>
+        @endguest
     </nav>
     <div class="container">
         @yield('content')
